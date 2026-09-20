@@ -54,5 +54,39 @@ This project was developed and tested using VS Code with the MSYS2 MinGW-w64 C++
 
 Compile the program:
 
+Run on Windows:
+
+.\CSC450_CT5_UserInput.exe
+
+The program expects CSC450_CT5_mod5.txt to be located in the same directory as the executable.
+
+Example
+
+The program prompts the user to enter text:
+
+Enter text to add to the file: File input and output allows C++ programs to store and retrieve data.
+
+The text is appended to CSC450_CT5_mod5.txt while preserving its existing contents.
+
+The program then creates CSC450-mod5-reverse.txt, containing the complete contents of the original file in reverse character order.
+
+Security and Error Handling
+
+Because the program works with user input and external files, it includes basic checks to verify that each file opens successfully before attempting to read or write data.
+
+The original file is opened using ios::app when user data is added. This prevents the program from unintentionally overwriting the existing contents of the instructor-provided file.
+
+Additional input validation and restrictions could be added in a larger application depending on how the entered data would ultimately be used.
+
+Author
+
+Cody G. Walker
+CSC450 - Programming III
+CSU Global
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
 ```bash
 g++ CSC450_CT5_UserInput.cpp -o CSC450_CT5_UserInput
